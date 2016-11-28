@@ -16,7 +16,7 @@ JPY = (function() {
         millisecond: 0,
         random: U.random,
         currentIndex: U.startIndex - 1,
-        outDateMsg: '脚本已过期！不能使用！',
+        outDateMsg: 'tips', // 脚本已过期！不能使用！
         endTs: U.endTs,
         main: function() {
             // if (this.hasOutOfDate()) {
@@ -62,16 +62,16 @@ JPY = (function() {
         },
         wizard: function() {
             if (U.guide) {
-                var delaySecond = prompt('延迟播放的时间范围，以秒为单位，以空格隔开，默认值为 3~20 秒', '3 20');
+                var delaySecond = prompt('tips', '3 20'); // 延迟播放的时间范围，以秒为单位，以空格隔开，默认值为 3~20 秒
                 delaySecond = delaySecond ? delaySecond.trim().split(' ') : U.dealySecond;
                 U.dealySecond = [delaySecond.shift(), delaySecond.pop()];
 
                 if ($('[spid][colid][class!=haveClick]').length == 0) {
-                    var random = confirm('是否随机播放？');
+                    var random = confirm('tips'); // tips
                     U.random = random;
 
                     if (!random) {
-                        var startIndex = prompt('共' + JPY.amount + '个视频，要从第几个视频开始观看？（直接输入数字）');
+                        var startIndex = prompt('tips' + JPY.amount + 'tips'); // 共 x 个视频，要从第几个视频开始观看？（直接输入数字）
                         U.startIndex = startIndex ? ((startIndex >= 1 && startIndex <= JPY.amount) ? startIndex : 1) : 1;
                     }
                 }
