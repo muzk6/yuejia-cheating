@@ -1,0 +1,15 @@
+{
+  "name": "yuejia-cheating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -w",
+    "pub": "set NODE_ENV=publish&& webpack -p"
+  },
+  "author": "muzk6",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  }
+}
